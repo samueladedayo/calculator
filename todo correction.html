@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="text" placeholder="Enter your todo" id="userInput">
+<button>Edit todo</button>
+<button onclick="addTodo()">Add todo</button>
+<button>Delete All todo</button>
+
+
+
+<body>
+
+    <script>
+        var allTodo = []
+
+        function addTodo() {
+            if (userInput.value == "") {
+                alert("please enter something")
+            } else {
+                allTodo.push(userInput.value)
+                userInput.value = ""
+                console.log(allTodo)
+            }
+        }
+
+        function deleteAllTodo() {
+            var userResponse = confirm("are you sure you want to delete it")
+            console.log(response)
+            if (userResponse == true) {
+                allTodo.splice(0, allTodo.length)
+                console.log(allTodo)
+            } else {
+                console.log("oriyoo e")
+                console.log(allTodo)
+            }
+            // allTodo.splice(0, allTodo.length)
+            // console.log(allTodo)
+        }
+
+        function editTodo() {
+            var userIndex = prompt("Enter the index you want to change")
+            var replacement = prompt("what do you wnt to replace it with?")
+            if (userIndex == "" || replacement) {
+                alert("you think say you dey wise")
+            } else {
+                allTodo.splice(userIndex, 1, replacement)
+                console.log(allTodo)
+            }
+        }
+    </script>
+    <!-- global var -->
+    <!-- local var -->
+</body>
+
+</html>

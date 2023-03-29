@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D</title>
+</head>
+
+<body>
+    <output id="output"></output>
+    <input type="text" id="row" placeholder="row" style="background-color: whitesmoke;">
+    <input type="text" id="col" placeholder="col" style="background-color: whitesmoke;">
+    <select name="" onchange="select()" id="myNumber">
+    <option value=""  style="background-color: whitesmoke;">Select an option</option>    
+    <option value="1"  style="background-color: whitesmoke;">addition</option>
+    <option value="2"  style="background-color: whitesmoke;">multiplication</option>h
+    <option value="3"  style="background-color: whitesmoke;"> subtraction</option>
+    <option value="4"  style="background-color: whitesmoke;">division</option>
+<script>
+    function select(){
+        if (myNumber.value == 1){
+            multiplication();
+        }
+    }
+function  multiplication(){
+var output = "";
+var r =row.value
+var c = col.value
+for (let i =1; i<= r; i++){
+output +=`<tr>`
+
+    for (let j =1; j<= c; j++){
+output +=`<th> ${i} * ${j} = ${i*j} </th>`
+    
+}
+output += `</tr>`
+}
+myTable.innerHTML = output
+}
+</script>
+</body>
+
+</html>

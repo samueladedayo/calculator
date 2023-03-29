@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="background-color:whitesmoke; height: 500px; width: 23%; margin-left: 400px; margin-top: 100px; border: none; border-radius: 10px;">
+        <div class="btn" style="background-color: blue; margin-left: 0px; margin-top: 120px; height: 470px; border-radius: 10px; box-shadow: 1px 1px 1px 4px rgb(43, 43, 231);">
+            <input type="text" placeholder="" id="myInput" style=" margin-top: 20px; box-shadow: 4px 2px 2px 1px rgb(56, 12, 203); width: 98%; height:100px; border: none; color:whitesmoke ; cursor: pointer; background-color: rgb(5, 5, 87); border-radius: 10px; font-size: 30px; font-weight: bolder;">
+            <div class="button" style="margin-left: 25px; padding: 4px ;">
+                <button onclick="displaySmtn('+')" style="cursor: pointer; padding-top: 10px; opacity: 0.5px; height: 35px; width:  23%; " style="padding: 5px ; margin-left:25px; "><div class="p " style="font-size: 20px; font-weight:bolder; ">+</div></button>
+                <button onclick="displaySmtn('-')" style="cursor: pointer; padding-top: 10px; height: 35px; width:  23%; " style="padding: 5px ; margin-left:25px; ">
+                <div class="q " style="font-size: 20px; font-weight:bolder; ">-</div>
+                </button>
+                <button onclick="displaySmtn('*')" style="cursor: pointer; padding-top: 10px; height: 35px; width: 23%; " style="padding: 5px ; margin-left:25px; ">
+                <div class="r " style="font-size: 20px; font-weight:bolder; ">*</div>
+                </button>
+                <button onclick="displaySmtn('/')" style="cursor: pointer; padding-top: 10px; height: 35px; width:  23%; " style="padding: 5px ; margin-left:25px; ">
+                <div class="s " style="font-size: 20px; font-weight:bolder; ">/</div>
+                </button>
+            </div>
+            <div class="all button " style="padding-top: 10px; ">
+                <div class="one " style="padding: 5px ; margin-left:25px; ">
+                    <button onclick="displaySmtn( '1', 'fish') " style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="a " style="font-size: 20px; font-weight:bolder; ">1</div></button>
+                    <button onclick="displaySmtn( '2', 'meat') " style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="b " style="font-size: 20px; font-weight:bolder;">2</div></button>
+                    <button onclick="displaySmtn( '3', 'meat') " style="cursor: pointer; height:40px; width:30%; background:none; border-radius: 5px; "><div class="c " style="font-size: 20px; font-weight:bolder; ">3</div></button>
+                </div>
+                <div class="two " style="padding: 5px ; margin-left:25px; ">
+                    <button onclick="displaySmtn( '4', 'meat') " style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="d " style="font-size: 20px; font-weight:bolder; ">4</div></button>
+                    <button onclick="displaySmtn( '5', 'meat') " style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="e " style="font-size: 20px; font-weight:bolder; ">5</div></button>
+                    <button onclick="displaySmtn( '6', 'meat') " style="cursor: pointer;height:40px; width:30%;  background:none; border-radius: 5px;"><div class="f " style="font-size: 20px; font-weight:bolder; ">6</div></button>
+                </div>
+                <div class="three " style="padding: 5px ;; margin-left:25px; ">
+                    <button onclick="displaySmtn( '7', 'meat') " style="cursor: pointer;height:40px; width:30%;  background:none; border-radius: 5px;"><div class="g " style="font-size: 20px; font-weight:bolder; ">7</div></button>
+                    <button onclick="displaySmtn( '8', 'meat') " style="cursor: pointer;height:40px; width:30%;  background:none; border-radius: 5px;"><div class="h " style="font-size: 20px; font-weight:bolder; ">8</div></button>
+                    <button onclick="displaySmtn( '9', 'meat') " style="cursor: pointer;height:40px; width:30%;  background:none; border-radius: 5px;"><div class="i " style="font-size: 20px; font-weight:bolder; ">9</div></button>
+                </div>
+                <div class="four " style="padding: 5px ; ; margin-left:25px; ">
+                    <button onclick="displaySmtn( '0') " style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="j " style="font-size: 20px; font-weight:bolder; ">0</div></button>
+                    <button onclick="displaySmtn('.')" style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="k " style="font-size: 20px; font-weight:bolder; ">.</div></button>
+                    <button onclick="equals('=')" style="cursor: pointer;height:40px; width:30%; background-color: rgb(16, 246, 16); "><div class="l " style="font-size: 20px; font-weight:bolder; ">=</div></button>
+                </div>
+                <div class="three " style="padding: 5px ;; margin-left:25px; ">
+                    <button onclick="displaySmtn( '%') " style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="m " style="font-size: 20px; font-weight:bolder; ">%</div></button>
+                    <button onclick="displaySmtn('(') " style="cursor: pointer;height:40px; width:30%;  background:none; border-radius: 5px;"><div class="n " style="font-size: 20px; font-weight:bolder; ">(</div></button>
+                    <button onclick="displaySmtn( ')') " style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="o " style="font-size: 20px; font-weight:bolder; ">)</div></button>
+                </div>
+                <div class="three " style="padding: 5px ;; margin-left:25px; ">
+                    <button onclick="Delete() " style="cursor: pointer;height:40px; width:30%; background:none; border-radius: 5px; "><div class="z " style="font-size: 20px; font-weight:bolder; ">c</div></button>
+                    <!-- <button onclick="displaySmtn('') " style="cursor: pointer;height:40px; width:28%; "><div class="n " style="font-size: 20px; font-weight:bolder; "></div></button>
+                    <button onclick="displaySmtn( '') " style="cursor: pointer;height:40px; width:28%; "><div class="o " style="font-size: 20px; font-weight:bolder; "></div></button> -->
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            function displaySmtn(parameterOne, parameterTwo) {
+                console.log(parameterOne, parameterTwo)
+                myInput.value += parameterOne
+            }
+
+            function equals() {
+                myInput.value = eval(myInput.value)
+            }
+
+            function Delete() {
+                myInput.value = ""
+            }
+        </script>
+</body>
+
+</html>

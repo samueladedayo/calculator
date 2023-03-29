@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="all" style="background-image: linear-gradient(to right top,green 40%, grey 40px); width:50%;margin-left: 320px; border-radius: 10px; margin-top: 100px;">
+        <h1 style="margin-left: 200px; color:rgb(5, 92, 92);">sign up input</h1>
+        <input type="text" placeholder="enter your first name........... " name="" id="fname" style="width: 99%; height: 30px; margin-top: 7px; border-radius: 7px; border: none;">
+        <input type="text" placeholder="Enter your last name........ " name="" id="lname" style="width: 99%; height: 25px; margin-top: 7px; border-radius: 7px; border: none;">
+        <input type="text" placeholder="dd//mm//yy........ " name="" id="Date" style="width: 99%; height: 25px; margin-top: 7px; border-radius: 7px; border: none;">
+        <input type="text" placeholder="Enter your email......" name="" id="email" style="width: 99%; height: 25px; margin-top: 7px; border-radius: 7px; border: none;">
+        <input type="text" placeholder="Enter your password......." name="" id="password" style="width: 99%; height: 25px; margin-top: 7px; border-radius: 7px; border: none;">
+        <div class="sign" style="display: flex; gap: 5px;">
+            <button onclick="signUp()" style="width: 50%; height: 25px; Background-color:rgb(0, 217, 255);  margin-top: 7px; border-radius: 7px; border: none;"> Sign UP</button>
+            <button onclick="deleteAll()" style="width: 50%; height: 25px; Background-color:red;  margin-top: 7px; border-radius: 7px; border: none;"> Delete All</button>
+        </div>
+    </div>
+    <script>
+        var allStudents = []
+
+        function signUp() {
+            var student = {
+                firstname: fname.value,
+                lastname: lname.value,
+                email: email.value,
+                password: password.value
+
+
+                    allStudent.push(student)
+                console.log(allStudent)
+                localStorage.setItem('localStudent', JSON.stringify(allStudent))
+                window.location.href = "signIn.html"
+            }
+        }
+
+        // var samuel = {
+        //     firstname: "samuel",
+        //     age: "129",
+        //     gender: "male",
+        //     height: "6ft",
+        //     talk: function() {
+        //         console.log("i am talking")
+        //     },
+        //     walk: function() {
+        //         console.log("i am walking")
+        //     }
+        // }
+        // console.log(samuel.age)
+        // samuel.walk()
+
+        // var student = {
+        //     firstname: "samuel",
+        //     lastname: "adedayo",
+        //     email: "samueladedayo@gmail.com",
+        //     password: "gsjgdskfgwdfd ",
+        // }
+
+
+
+
+
+        // var myTable = {
+        //         color: "white",
+        //         shape: "rectangular",
+        //         noOfstnds: 2,
+        //     }
+        // dot notation
+        // console.log(
+        //         myTable.color, myTable.shape
+        //     )
+        // bracket notation
+    </script>
+</body>
+
+</html>
